@@ -1,5 +1,5 @@
-/* Primary and title color text */
 :root {
+    /* Primary and title color text */
     --primary-text-color: #434455;
     --title-text-color: #2E2F42;
     --link-text-cont: #434455;
@@ -14,6 +14,7 @@
     --logo-text-footer: #F4F4FD;
     --footer-text: #E7E9FC;
     --footer-bcg-color: #2E2F42;
+
     /* portfolio buttons */
     --current-text-color: #4D5AE5;
     --primary-btn-color: #404BBF;
@@ -21,6 +22,34 @@
     --border-btn-color: #E7E9FC;
     --primary-btntext-color: #FFFFFF;
     --secondary-btntext-color: #4D5AE5;
+
+    /* borders */
+    --border-col-portfolio: #E7E9FC;
+    --indent: 24px;
+    /*ширина между img в секции 2 главной страницы*/
+}
+
+/* Глобальній сброс стилей H1....H6, ul, p */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+/* delete the list's marker */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* background-color and basic text color of body*/
@@ -31,13 +60,17 @@ body {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    width: 1440px;
 }
+
+/*===================*/
+/*   HEADER SECTION  */
+/*===================*/
 
 /* style  logo */
 .logo {
     /* у хедері задає колір по макету для текстових елементів */
     color: var(--logo-text-color);
-    height: 22px;
     font-family: Raleway, sans-serif;
     font-weight: 800;
     font-size: 18px;
@@ -50,18 +83,15 @@ body {
     color: var(--title-text-color);
 }
 
-/* delete the list's marker */
-ul {
-    list-style: none;
-}
-
 /* site navigation */
 .link {
+    padding-top: 24px;
+    /*увеличивает область ссылки*/
+    padding-bottom: 24px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     width: 66px;
-    height: 24px;
     /* у хедері задає колір по макету для текстових елементів */
     color: var(--title-text-color);
     text-decoration: none;
@@ -74,6 +104,38 @@ ul {
     border-radius: 2px;
 }
 
+.header {
+    display: flex;
+    padding: 24px 156px 24px 156px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-col-portfolio);
+    /* outline: 5px solid blue;
+    background-color: yellow; */
+}
+
+.header-logo {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 76px;
+    /* outline: 5px solid orange;
+    background-color: rgb(50, 226, 59); */
+}
+
+.site-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+    /* outline: 2px solid rgb(192, 28, 28); */
+}
+
+.header-cont {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+    /* outline: 5px solid rgb(235, 16, 118); */
+}
+
 /* contacts */
 .link-contacts {
     /* у хедері задає колір по макету для текстових елементів */
@@ -82,6 +144,9 @@ ul {
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-decoration: none;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    /* display: flex; */
 }
 
 .link-contacts:hover,
@@ -89,64 +154,35 @@ ul {
     color: var(--site-nav-link);
 }
 
-/* section header-text color */
-.section-title-feature {
-    color: var(--title-text-color);
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.2;
-}
 
-/* H2 of section 3 in the main*/
-.section .section-title {
-    color: var(--title-text-color);
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11;
-    text-align: center;
-}
+/*===================*/
+/*         HERO      */
+/*===================*/
 
-/* H3 of section 3 in the main */
-.section .section-title-name {
-    color: var(--title-text-color);
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.2;
-    text-align: center;
-}
-
-.section-p {
-    font-size: 16px;
-    line-height: 1.15;
-    text-align: center;
-}
-
-/* Выравнивание абзаца слева в секции 1  */
-.text-p {
-    text-align: left;
-    font-size: 16px;
-    line-height: calc (24 / 16);
-}
-
-
-/*H2 на главной странице*/
-.letter {
-    text-transform: capitalize;
-}
-
-/* Hero */
-.hero-title {
+.hero {
+    width: 1440px;
+    height: 600px;
     background-color: var(--hero-title-bcg);
+    text-align: center;
+    padding: 188px 473px;
+    /* outline: 5px solid green; */
+}
+
+.hero-title {
     color: var(--hero-title-button);
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
     text-align: center;
+    width: 511px;
+    margin-bottom: 48px;
 }
 
 .hero-button {
     background: var(--hero-bcg-button);
     color: var(--hero-title-button);
+    width: 169px;
+    height: 56px;
     border-color: transparent;
     cursor: pointer;
     font-family: Roboto, sans-serif;
@@ -162,30 +198,141 @@ ul {
     background: var(--hero-hover-button);
 }
 
-/* footers' style */
+/*===================*/
+/*       SECTIONS    */
+/*===================*/
+
+/* Для всех секций используется один класс .section*/
+.section {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    padding-top: 120px;
+}
+
+/* section 1 */
+.section-item {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+}
+
+/*H2 на главной странице*/
+.letter {
+    text-transform: capitalize;
+}
+
+/* section 1 - H3-text color */
+.section-title-feature {
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+/* Выравнивание абзаца слева в секции 1  */
+.text-p {
+    text-align: left;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+}
+
+/* section 2 */
+/* Сетка для секции 2 и секции 3 */
+.card-set {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+    /* outline: 5px solid yellow; */
+}
+
+.card-item {
+    --items: 3;
+    /* flex-basis: calc((100% - (24px*2))/3); */
+    flex-basis: calc((100% - (var(--indent) * (var(--items) - 1))) / var(--items));
+    /* outline: 3px solid rgb(223, 61, 61) */
+}
+
+/*для секции 3 - сетка*/
+.card-item-team {
+    flex-basis: calc((100% - (24px * 3)) / 4);
+    /* outline: 3px solid rgb(132, 34, 224); */
+
+}
+
+/* section 3 */
+
+/* H2 of section 3 in the main*/
+.section-title {
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+/* H3 of section 3 in the main */
+.section-title-name {
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 32px;
+}
+
+.section-p {
+    font-size: 16px;
+    line-height: 1.15;
+    text-align: center;
+}
+
+/* Нижний паддинг в секции 3 TEAM */
+.pad {
+    padding-bottom: 120px;
+}
+
+/*===================*/
+/*         FOOTER    */
+/*===================*/
+.container-foot {
+    width: 1440px;
+    height: 310px;
+    padding: 100px 1020px 100px 156px;
+    background-color: var(--footer-bcg-color);
+}
 
 .footer-text {
     color: var(--footer-text);
     width: 264px;
-    height: 72px;
     font-size: 16px;
-}
-
-footer {
-    background-color: var(--footer-bcg-color);
 }
 
 .white {
     color: var(--logo-text-footer);
 }
 
-/* portfolio page */
+/*===================*/
+/*  PORTFOLIO PAGE   */
+/*===================*/
 
-/* active color-text "Portfolio" */
+
+/* active color-text "Portfolio" in header*/
 .current {
     color: var(--current-text-color);
 }
 
+/* секция для кнопок */
+.section-btn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 96px 427px 72px;
+    /* outline: 2px solid red; */
+}
 
 /* buttons */
 .primary-button {
@@ -193,7 +340,7 @@ footer {
     background: var(--secondary-btn-color);
     border-color: var(--border-btn-color);
     cursor: pointer;
-
+    height: 48px;
 
     font-family: Roboto, sans-serif;
     font-weight: 500;
@@ -212,21 +359,59 @@ footer {
     border: 1px solid var(--primary-btn-color);
 }
 
-/* .second-button {
-    background: var(--secondary-btn-color);
-    color: var(--secondary-btntext-color);
-    border-color: var(--border-btn-color);
-    cursor: pointer;
+/* ширина кнопок */
+.one {
+    width: 69px;
 }
 
-.second-button:hover,
-.second-button:focus {
-    border: 1px solid var(--border-btn-color);
-} */
+.two {
+    width: 116px;
+}
 
-.rows .section-title {
+.three {
+    width: 78px;
+}
+
+.four {
+    width: 101px;
+}
+
+.five {
+    width: 126px;
+}
+
+/* Паддинги сетки в Портфолио */
+.top {
+    padding-top: 0px;
+    padding-bottom: 120px;
+}
+
+.row .section-title {
     font-weight: 700;
     font-size: 20px;
     line-height: 1.2;
     color: var(--title-text-color);
+    text-align: left;
+    margin-bottom: 8px;
 }
+
+/* Borders in Portfolio page */
+.img-margin {
+    display: block;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.section-border {
+    display: inline-block;
+    width: 360px;
+    height: 120px;
+    border-left: 1px solid var(--border-col-portfolio);
+    border-right: 1px solid var(--border-col-portfolio);
+    border-bottom: 1px solid var(--border-col-portfolio);
+    margin-bottom: 48px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 16px; 
+} 
+
