@@ -15,6 +15,8 @@
     --footer-text: #E7E9FC;
     --footer-bcg-color: #2E2F42;
 
+    --background-team: #F4F4FD;
+
     /* portfolio buttons */
     --current-text-color: #4D5AE5;
     --primary-btn-color: #404BBF;
@@ -25,8 +27,8 @@
 
     /* borders */
     --border-col-portfolio: #E7E9FC;
-    --indent: 24px;
     /*ширина между img в секции 2 главной страницы*/
+    --indent: 24px;
 }
 
 /* Глобальній сброс стилей H1....H6, ul, p */
@@ -61,6 +63,19 @@ body {
     line-height: 1.5;
     letter-spacing: 0.02em;
     width: 1440px;
+}
+
+/**
+  |============================
+  | div container for all sections
+  |============================
+*/
+
+.container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
 }
 
 /*===================*/
@@ -106,7 +121,8 @@ body {
 
 .header {
     display: flex;
-    padding: 24px 156px 24px 156px;
+    padding-top: 24px;
+    padding-bottom: 24px;
     flex-wrap: nowrap;
     justify-content: space-between;
     border-bottom: 1px solid var(--border-col-portfolio);
@@ -160,11 +176,9 @@ body {
 /*===================*/
 
 .hero {
-    width: 1440px;
-    height: 600px;
     background-color: var(--hero-title-bcg);
     text-align: center;
-    padding: 188px 473px;
+    padding: 188px 0px;
     /* outline: 5px solid green; */
 }
 
@@ -175,14 +189,16 @@ body {
     line-height: 1.07;
     text-align: center;
     width: 511px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 48px;
 }
 
 .hero-button {
     background: var(--hero-bcg-button);
     color: var(--hero-title-button);
-    width: 169px;
-    height: 56px;
+    /* width: 169px;
+    height: 56px; */
     border-color: transparent;
     cursor: pointer;
     font-family: Roboto, sans-serif;
@@ -191,6 +207,7 @@ body {
     line-height: 1.5;
     align-items: center;
     letter-spacing: 0.04em;
+    border-radius: 2px;
 }
 
 .hero .hero-button:hover,
@@ -204,11 +221,8 @@ body {
 
 /* Для всех секций используется один класс .section*/
 .section {
-    max-width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
     padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 /* section 1 */
@@ -244,8 +258,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 24px;
-    /* outline: 5px solid yellow; */
+    gap: 48px 24px;
 }
 
 .card-item {
@@ -263,6 +276,10 @@ body {
 }
 
 /* section 3 */
+/* фон для секции Our Team */
+.fon {
+    background-color: var(--background-team);
+}
 
 /* H2 of section 3 in the main*/
 .section-title {
@@ -281,7 +298,6 @@ body {
     font-size: 20px;
     line-height: 1.2;
     text-align: center;
-    padding-top: 32px;
 }
 
 .section-p {
@@ -290,18 +306,22 @@ body {
     text-align: center;
 }
 
-/* Нижний паддинг в секции 3 TEAM */
-.pad {
-    padding-bottom: 120px;
+.p {
+    margin: 0;
+}
+
+.card-content {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: var(--body-bcg-color);
 }
 
 /*===================*/
 /*         FOOTER    */
 /*===================*/
-.container-foot {
-    width: 1440px;
-    height: 310px;
-    padding: 100px 1020px 100px 156px;
+.footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
     background-color: var(--footer-bcg-color);
 }
 
@@ -309,6 +329,11 @@ body {
     color: var(--footer-text);
     width: 264px;
     font-size: 16px;
+}
+
+.logo {
+    /* display: block; */
+    margin-bottom: 16px;
 }
 
 .white {
@@ -329,8 +354,10 @@ body {
 .section-btn {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 24px;
-    padding: 96px 427px 72px;
+    margin-bottom: 72px;
+    /* padding: 96px 427px 72px; */
     /* outline: 2px solid red; */
 }
 
@@ -339,8 +366,10 @@ body {
     color: var(--primary-btn-color);
     background: var(--secondary-btn-color);
     border-color: var(--border-btn-color);
+    border: none;
     cursor: pointer;
     height: 48px;
+    border-radius: 2px;
 
     font-family: Roboto, sans-serif;
     font-weight: 500;
@@ -386,6 +415,15 @@ body {
     padding-bottom: 120px;
 }
 
+.section-port {
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
+
+.nul {
+    padding-top: 0px;
+}
+
 .row .section-title {
     font-weight: 700;
     font-size: 20px;
@@ -405,13 +443,14 @@ body {
 .section-border {
     display: inline-block;
     width: 360px;
-    height: 120px;
     border-left: 1px solid var(--border-col-portfolio);
     border-right: 1px solid var(--border-col-portfolio);
     border-bottom: 1px solid var(--border-col-portfolio);
-    margin-bottom: 48px;
     padding-top: 32px;
     padding-bottom: 32px;
-    padding-left: 16px; 
-} 
+    padding-left: 16px;
+}
 
+.section-title-p {
+    margin: 0px;
+}
