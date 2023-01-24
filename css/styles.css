@@ -37,7 +37,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
     margin: 0;
 }
 
@@ -82,6 +83,23 @@ body {
 /*   HEADER SECTION  */
 /*===================*/
 
+.header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-col-portfolio);
+    /* outline: 5px solid blue;
+    background-color: yellow; */
+}
+
+.header-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* border-bottom: 1px solid var(--border-col-portfolio); */
+    /* outline: 3px solid green; */
+}
+
 /* style  logo */
 .logo {
     /* у хедері задає колір по макету для текстових елементів */
@@ -91,11 +109,16 @@ body {
     font-size: 18px;
     line-height: 1.17;
     text-decoration: none;
-}
+    /* outline: 3px solid blue;*/
+} 
 
 .logo-studio {
     /* у хедері задає колір по макету для текстових елементів */
     color: var(--title-text-color);
+    font-family: Raleway, sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
 }
 
 /* site navigation */
@@ -119,16 +142,6 @@ body {
     border-radius: 2px;
 }
 
-.header {
-    display: flex;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--border-col-portfolio);
-    /* outline: 5px solid blue;
-    background-color: yellow; */
-}
 
 .header-logo {
     display: flex;
@@ -149,6 +162,7 @@ body {
     display: flex;
     flex-wrap: nowrap;
     gap: 40px;
+
     /* outline: 5px solid rgb(235, 16, 118); */
 }
 
@@ -160,8 +174,8 @@ body {
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-decoration: none;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    /* padding-top: 24px;
+    padding-bottom: 24px; */
     /* display: flex; */
 }
 
@@ -208,6 +222,7 @@ body {
     align-items: center;
     letter-spacing: 0.04em;
     border-radius: 2px;
+    padding: 16px 32px;
 }
 
 .hero .hero-button:hover,
@@ -243,6 +258,7 @@ body {
     font-weight: 700;
     font-size: 20px;
     line-height: 1.2;
+    margin-bottom: 8px;
 }
 
 /* Выравнивание абзаца слева в секции 1  */
@@ -271,6 +287,7 @@ body {
 /*для секции 3 - сетка*/
 .card-item-team {
     flex-basis: calc((100% - (24px * 3)) / 4);
+    background-color: white;
     /* outline: 3px solid rgb(132, 34, 224); */
 
 }
@@ -289,6 +306,8 @@ body {
     line-height: 1.11;
     text-align: center;
     margin-bottom: 72px;
+    padding-top: 0px;
+   
 }
 
 /* H3 of section 3 in the main */
@@ -298,12 +317,15 @@ body {
     font-size: 20px;
     line-height: 1.2;
     text-align: center;
+    margin-top: 32px;
+    margin-bottom: 8px;
 }
 
 .section-p {
     font-size: 16px;
     line-height: 1.15;
     text-align: center;
+    margin-bottom: 32px;
 }
 
 .p {
@@ -311,8 +333,8 @@ body {
 }
 
 .card-content {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    /* padding-top: 32px;
+    padding-bottom: 32px; */
     background-color: var(--body-bcg-color);
 }
 
@@ -329,10 +351,11 @@ body {
     color: var(--footer-text);
     width: 264px;
     font-size: 16px;
+    
 }
 
-.logo {
-    /* display: block; */
+.logo-foot {
+    display: block;
     margin-bottom: 16px;
 }
 
