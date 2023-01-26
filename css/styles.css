@@ -63,7 +63,6 @@ body {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    width: 1440px;
 }
 
 /**
@@ -317,7 +316,7 @@ body {
     font-size: 20px;
     line-height: 1.2;
     text-align: center;
-    margin-top: 32px;
+    /* margin-top: 32px; */
     margin-bottom: 8px;
 }
 
@@ -325,7 +324,7 @@ body {
     font-size: 16px;
     line-height: 1.15;
     text-align: center;
-    margin-bottom: 32px;
+    /* margin-bottom: 32px; */
 }
 
 .p {
@@ -333,8 +332,8 @@ body {
 }
 
 .card-content {
-    /* padding-top: 32px;
-    padding-bottom: 32px; */
+    padding-top: 32px;
+    padding-bottom: 32px;
     background-color: var(--body-bcg-color);
 }
 
@@ -357,6 +356,7 @@ body {
 .logo-foot {
     display: block;
     margin-bottom: 16px;
+    text-decoration: none;
 }
 
 .white {
@@ -393,6 +393,7 @@ body {
     cursor: pointer;
     height: 48px;
     border-radius: 2px;
+    padding: 12px 24px;
 
     font-family: Roboto, sans-serif;
     font-weight: 500;
@@ -409,27 +410,6 @@ body {
     /* border-color: transparent; */
     border-color: var(--border-btn-color);
     border: 1px solid var(--primary-btn-color);
-}
-
-/* ширина кнопок */
-.one {
-    width: 69px;
-}
-
-.two {
-    width: 116px;
-}
-
-.three {
-    width: 78px;
-}
-
-.four {
-    width: 101px;
-}
-
-.five {
-    width: 126px;
 }
 
 /* Паддинги сетки в Портфолио */
